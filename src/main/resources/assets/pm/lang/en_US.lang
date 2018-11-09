@@ -1,1 +1,7 @@
+//Items
+
 item.rainbow.name=Rainbow
+
+//Blocks
+
+tile.new_block.name=Block of Colors
