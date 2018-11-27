@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        " r ",
+        " s ",
+        " s "
+    ],
+   
+    "key":
+    {
+        "r":
+        {
+            "item": "pm:rainbow"
+        },
+        
+        "s":
+        {
+            "item": "minecraft:stick"
+        }
+    },
+   
+    "result":
+    {
+        "item": "pm:rainbow_shovel",
+        "count": 1
+    }
+}

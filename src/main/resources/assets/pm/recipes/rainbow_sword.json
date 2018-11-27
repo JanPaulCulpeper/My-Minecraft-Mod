@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        " r ",
+        " r ",
+        " s "
+    ],
+   
+    "key":
+    {
+        "r":
+        {
+            "item": "pm:rainbow"
+        },
+        
+        "s":
+        {
+            "item": "minecraft:stick"
+        }
+    },
+   
+    "result":
+    {
+        "item": "pm:rainbow_sword",
+        "count": 1
+    }
+}

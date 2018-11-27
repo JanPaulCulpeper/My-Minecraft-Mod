@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "rr ",
+        "rs ",
+        " s "
+    ],
+   
+    "key":
+    {
+        "r":
+        {
+            "item": "pm:rainbow"
+        },
+        
+        "s":
+        {
+            "item": "minecraft:stick"
+        }
+    },
+   
+    "result":
+    {
+        "item": "pm:rainbow_axe",
+        "count": 1
+    }
+}

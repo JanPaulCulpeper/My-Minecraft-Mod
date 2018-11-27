@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shapeless",
+ 
+    "ingredients":
+    [
+ 
+    {
+      "item": "pm:rainbow"
+    },
+    
+    {
+      "item": "minecraft:apple"
+    },
+ 
+    {
+      "item": "minecraft:apple"
+    }
+   
+    ],
+ 
+    "result":
+    {
+        "item": "pm:new_block",
+        "count": 2
+    }
+}

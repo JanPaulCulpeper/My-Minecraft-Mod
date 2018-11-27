@@ -5,3 +5,20 @@ item.rainbow.name=Rainbow
 //Blocks
 
 tile.new_block.name=Block of Colors
+tile.cryptic_block.name=Cryptic Block
+
+//Tools
+
+item.rainbow_sword.name=Rainbow Sword
+item.rainbow_shovel.name=Rainbow Shovel
+item.rainbow_pickaxe.name=Rainbow Pickaxe
+item.rainbow_axe.name=Rainbow Axe
+item.rainbow_hoe.name=Rainbow Hoe
+
+//Armor
+
+item.rainbow_helmet.name=Rainbow Helmet
+item.rainbow_chestplate.name=Rainbow Chestplate
+item.rainbow_leggings.name=Rainbow Leggings
+item.rainbow_boots.name=Rainbow Boots
+
