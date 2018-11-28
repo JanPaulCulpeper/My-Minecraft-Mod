@@ -15,5 +15,5 @@ public class ModBlocks
    public static final List<Block> BLOCKS = new ArrayList<Block>();
    
    public static final Block NEW_BlOCK = new RainbowBlock("new_block", Material.IRON);
-   public static final Block CRYPIC_BLOCK = new RainbowOre("cryptic_block", Material.ROCK);
+   public static final Block CRYPTIC_BlOCK = new RainbowOre("cryptic_block", Material.IRON);
 }
