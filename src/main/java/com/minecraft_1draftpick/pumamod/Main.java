@@ -3,6 +3,7 @@ package com.minecraft_1draftpick.pumamod;
 import com.minecraft_1draftpick.pumamod.init.ModRecipes;
 import com.minecraft_1draftpick.pumamod.proxy.CommonProxy;
 import com.minecraft_1draftpick.pumamod.util.Reference;
+import com.minecraft_1draftpick.pumamod.util.handlers.RegistryHandler;
 import com.minecraft_1draftpick.pumamod.world.ModWorldGen;
 
 import net.minecraftforge.fml.common.Mod;
@@ -12,6 +13,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
@@ -38,6 +40,11 @@ public class Main {
 	@EventHandler
 	public static void PostInit(FMLPostInitializationEvent event) {
 		
+	}
+	
+	@EventHandler
+	public static void serverInit(FMLServerStartingEvent event) {
+		RegistryHandler.serverRegistries(event);
 	}
 	
 	

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.minecraft_1draftpick.pumamod.blocks.BlockBase;
+import com.minecraft_1draftpick.pumamod.blocks.BlockTeleporter;
 import com.minecraft_1draftpick.pumamod.blocks.RainbowBlock;
 import com.minecraft_1draftpick.pumamod.blocks.RainbowOre;
 
@@ -16,4 +17,5 @@ public class ModBlocks
    
    public static final Block NEW_BlOCK = new RainbowBlock("new_block", Material.IRON);
    public static final Block CRYPTIC_BlOCK = new RainbowOre("cryptic_block", Material.IRON);
+   public static final BlockTeleporter TELEPORTER_BLOCK = new BlockTeleporter("teleporter_block", Material.ROCK);
 }
