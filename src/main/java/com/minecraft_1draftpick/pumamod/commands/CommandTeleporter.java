@@ -15,7 +15,7 @@ import net.minecraft.util.text.TextFormatting;
 import com.minecraft_1draftpick.pumamod.util.Reference;
 import com.minecraft_1draftpick.pumamod.util.Teleport;
 
-public class CommandDimensionTeleport extends CommandBase {
+public class CommandTeleporter extends CommandBase {
 	
 	private final List<String> aliases = Lists.newArrayList(Reference.MOD_ID,"tp", "tpdimension", "teleportimension", "teleport");
 

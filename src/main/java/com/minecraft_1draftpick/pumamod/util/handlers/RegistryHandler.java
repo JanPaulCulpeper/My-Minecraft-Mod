@@ -1,6 +1,6 @@
 package com.minecraft_1draftpick.pumamod.util.handlers;
 
-import com.minecraft_1draftpick.pumamod.commands.CommandDimensionTeleport;
+import com.minecraft_1draftpick.pumamod.commands.CommandTeleporter;
 import com.minecraft_1draftpick.pumamod.init.ModBlocks;
 import com.minecraft_1draftpick.pumamod.init.ModItems;
 import com.minecraft_1draftpick.pumamod.util.IHasModel;
@@ -42,7 +42,7 @@ public class RegistryHandler {
 	}
 	
 	public static void serverRegistries(FMLServerStartingEvent event) {
-		event.registerServerCommand(new CommandDimensionTeleport());
+		event.registerServerCommand(new CommandTeleporter());
 	}
 	
 	
