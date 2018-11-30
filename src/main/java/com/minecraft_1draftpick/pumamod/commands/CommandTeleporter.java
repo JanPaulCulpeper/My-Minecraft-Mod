@@ -3,6 +3,8 @@ package com.minecraft_1draftpick.pumamod.commands;
 import java.util.List;
 
 import com.google.common.collect.Lists;
+import com.minecraft_1draftpick.pumamod.commands.Util.Teleport;
+import com.minecraft_1draftpick.pumamod.util.Reference;
 
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
@@ -12,12 +14,9 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
 
-import com.minecraft_1draftpick.pumamod.util.Reference;
-import com.minecraft_1draftpick.pumamod.util.Teleport;
-
-public class CommandTeleporter extends CommandBase {
+public class CommandTeleporter extends CommandBase{
 	
-	private final List<String> aliases = Lists.newArrayList(Reference.MOD_ID,"tp", "tpdimension", "teleportimension", "teleport");
+	private final List<String> aliases = Lists.newArrayList(Reference.MOD_ID,"tp","tpdim","tpdimension","teleportdimension","teleport");
 
 	@Override
 	public String getName() {
@@ -26,40 +25,41 @@ public class CommandTeleporter extends CommandBase {
 
 	@Override
 	public String getUsage(ICommandSender sender) {
-		return "tpdimension <id>"; 
+		
+		return "tpdimension<id>";
 	}
-	
 	@Override
 	public List<String> getAliases() {
+		// TODO Auto-generated method stub
 		return aliases;
 	}
 	
-	 @Override
+	
+	@Override
 	public boolean checkPermission(MinecraftServer server, ICommandSender sender) {
-		 return true;
-	}
-
+		return true;
+	} 
+	
 	@Override
 	public void execute(MinecraftServer server, ICommandSender sender, String[] args) throws CommandException {
-		if(args.length < 1) return;
-		
+		if(args.length < 1)return ;
 		String s = args[0];
-		int dimensionID;
-		
+		int dimensionID = 0;
 		try {
-			
 			dimensionID = Integer.parseInt(s);
-			
-		} catch(NumberFormatException e)
-		
+		}catch(NumberFormatException e)
 		{
-			sender.sendMessage(new TextComponentString(TextFormatting.RED + "Dimmension ID Invalid"));
-			return;
+			sender.sendMessage(new TextComponentString(TextFormatting.RED + "Dimension ID Invalid"));
 		}
+		
 		
 		if(sender instanceof EntityPlayer) {
-			Teleport.teleportToDimension((EntityPlayer)sender, dimensionID, sender.getPosition().getX(), sender.getPosition().getY() + 5, sender.getPosition().getZ());
-		}
+			if(dimensionID == 1) {
+				Teleport.teleportToDemension((EntityPlayer) sender, 0, 55, 0);
+			}
+			else {
+			Teleport.teleportToDemension((EntityPlayer) sender, sender.getPosition().getX(), sender.getPosition().getY(), sender.getPosition().getZ());
+		}}
 	}
 
 }
