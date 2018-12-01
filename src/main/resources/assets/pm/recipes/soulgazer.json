@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "   ",
+        "odo",
+        "   "
+    ],
+   
+    "key":
+    {
+        "o":
+        {
+            "item": "minecraft:obsidian"
+        },
+        
+        "d":
+        {
+            "item": "minecraft:diamond"
+        }
+    },
+   
+    "result":
+    {
+        "item": "pm:soulgazer",
+        "count": 1
+    }
+}

@@ -36,6 +36,7 @@ public class ModItems {
 	
 	//items
 	public static final Item RAINBOW = new ItemBase("rainbow", Material.IRON);
+	public static final Item SOULGAZER = new ItemBase("soulgazer", Material.IRON);
 	
 	//tools
 	public static final ItemSword RAINBOW_SWORD = new ToolSword("rainbow_sword", MATERIAL_RAINBOW);
