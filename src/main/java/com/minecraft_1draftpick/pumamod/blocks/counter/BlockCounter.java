@@ -48,28 +48,28 @@ public class BlockCounter extends BlockTileEntity<TileEntityCounter> implements 
 	}
 	
 	
-	static BlockPos closestblock(World world, BlockPos start, int rad){
-		int counter = 1;
+	static BlockPos closestblock(World world, BlockPos start, int radius){
+		int quantity = 1;
 		ArrayList<BlockPos> InRadiusAndSameId = new ArrayList<BlockPos>();
 		BlockPos result = new BlockPos(start.getX(),start.getY(),start.getZ());
-	while(counter != rad) {
-		for(int x = start.getX() - counter; x <= start.getX() + counter; x++)
-			for(int y = start.getY() - counter; y <= start.getY() + counter; y++)
-				for(int z = start.getZ() - counter; z <= start.getZ() + counter;z++) {
+	while(quantity != radius) {
+		for(int x = start.getX() - quantity; x <= start.getX() + quantity; x++)
+			for(int y = start.getY() - quantity; y <= start.getY() + quantity; y++)
+				for(int z = start.getZ() - quantity; z <= start.getZ() + quantity;z++) {
 					BlockPos position = new BlockPos(x,y,z);
 					if((position.getX() - start.getX() < 1 && position.getY() - start.getY() < 1 && position.getZ() - start.getZ()<1)) { 
 						continue;
 					}
 					if (world.getTileEntity(position) instanceof TileEntityCounter){
-						TileEntityCounter otro = (TileEntityCounter) world.getTileEntity(position);
-						TileEntityCounter mio = (TileEntityCounter) world.getTileEntity(start);
-						if( mio.getCount() == otro.getCount()) {
+						TileEntityCounter secondBlock = (TileEntityCounter) world.getTileEntity(position);
+						TileEntityCounter firstBlock = (TileEntityCounter) world.getTileEntity(start);
+						if( firstBlock.getCount() == secondBlock.getCount()) {
 							InRadiusAndSameId.add(position);
 						}
 						
 					}	
 				}
-		counter++;
+		quantity++;
 	}
 	
 	int xds = (InRadiusAndSameId.get(0).getX() - start.getX()) * (InRadiusAndSameId.get(0).getX() - start.getX());
