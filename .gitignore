@@ -23,3 +23,10 @@
 hs_err_pid*
 /bin/
 /run/
+/build/
+/gradle/
+/build.gradle
+/gradlew
+/gradlew.bat
+/minecraft-1draftpick_Client.launch
+/minecraft-1draftpick_Server.launch
